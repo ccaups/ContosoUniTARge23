@@ -1,12 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
-
-namespace ContosoUniTARge23.Models
+﻿namespace ContosoUniTARge23.Models
 {
-    public class HomeController : Controller
+    public class Student
     {
-        public IActionResult Index()
-        {
-            return View();
-        }
+        public int Id { get; set; }
+        public string LastName { get; set; }
+        public string FirstMidName { get; set; }
+        public DateTime EnrollmentDate { get; set; }
+        public ICollection<Enrollment> Enrollment { get; set; }
     }
 }
